@@ -11,3 +11,7 @@
 * Jest
 * Supertest
 * DDD
+* Eslint
+* Eslint Standard
+* Lint Staged
+* Husky
