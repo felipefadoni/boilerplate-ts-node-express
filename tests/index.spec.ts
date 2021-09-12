@@ -1,5 +1,5 @@
-describe('test', () => {
-  it('shold be init test', () => {
-    expect(1).toBe(1)
+describe('Test', () => {
+  it('test', () => {
+    expect(2).toBe(2)
   })
 })
