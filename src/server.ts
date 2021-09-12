@@ -1,7 +1,7 @@
-import express from 'express';
+import './main/config/module-alias'
 
-const app = express();
+import app from '@/main/config/app'
 
 app.listen(3000, () => {
-    console.log('listening on port 3000');
+  console.log('App Started!!!')
 })
