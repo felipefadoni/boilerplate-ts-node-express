@@ -5,9 +5,9 @@
   "repository": "https://github.com/felipefadoni/boilerplate-ts-node-express.git",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev --inspect --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register ./src/server.ts",
+    "dev": "NODE_ENV=development ts-node-dev --inspect --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register ./src/main/index.ts",
     "build": "rimraf ./dist && tsc -p tsconfig-build.json",
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/main/index.js",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",

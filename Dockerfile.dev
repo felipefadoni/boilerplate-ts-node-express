@@ -1,0 +1,15 @@
+FROM node:14
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+# ENV DATABASE_URL=$DATABASE_URL
+
+COPY . .
+
+EXPOSE 8080
+
+CMD [ "npm", "run", "dev" ]
