@@ -1,13 +1,37 @@
 {
   "name": "boilerplate-ts-node-express",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/felipefadoni/boilerplate-ts-node-express.git",
-  "license": "MIT",
+  "description": "Professional API Template.",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "express",
+    "clean code",
+    "tdd",
+    "ddd",
+    "design patterns",
+    "node",
+    "typescript",
+    "jest",
+    "knex",
+    "postgres"
+  ],
+  "author": {
+    "name": "Felipe Fadoni",
+    "email": "felipefadonimt@gmail.com",
+    "url": "https://github.com/felipefadoni"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipefadoni/boilerplate-ts-node-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felipefadoni/boilerplate-ts-node-express/issues",
+    "email": "felipefadonimt@gmail.com"
+  },
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev --inspect --respawn --transpile-only --clear --ignore-watch node_modules -r tsconfig-paths/register src/main/index.ts",
-    "build": "rimraf ./dist && tsc -p tsconfig-build.json",
     "start": "node ./dist/main/index.js",
+    "build": "rimraf ./dist && tsc -p tsconfig-build.json",
+    "dev": "NODE_ENV=development ts-node-dev --inspect --respawn --transpile-only --clear --ignore-watch node_modules -r tsconfig-paths/register src/main/index.ts",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",

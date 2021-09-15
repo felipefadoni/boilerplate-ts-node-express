@@ -18,5 +18,5 @@
 
 ### Create Migration
 ```
-npx knex migrate:make create-table-dispatchability -x ts
+npx knex migrate:make migration_name -x ts
 ```
