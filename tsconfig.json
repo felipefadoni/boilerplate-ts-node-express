@@ -5,7 +5,7 @@
     "target": "ES2015",
     "lib": ["ES2015"],
     "module": "commonjs",
-    "rootDir": "src",
+    "rootDirs": ["src", "tests"],
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {

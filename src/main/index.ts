@@ -1,9 +1,16 @@
 import './config/module-alias'
 
-import { env } from './config/env'
-import app from './config/app'
-import { logger } from './config/logger'
+import { env } from '@/main/config/env'
 
-app.listen(env.port, () => {
-  logger.info(`SERVER IS ONLINE: http://localhost:${env.port}`)
-})
+import { logger } from '@/main/config/logger'
+import { dbConnection } from '@/infra/db/helpers'
+
+dbConnection
+  .getInstance()
+  .then(async () => {
+    const { app } = await import('@/main/config/app')
+    app.listen(env.port, () =>
+      logger.info(`Server running at http://localhost:${env.port}`)
+    )
+  })
+  .catch(logger.error)

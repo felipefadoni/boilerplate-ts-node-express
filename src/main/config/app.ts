@@ -1,6 +1,4 @@
 
 import express from 'express'
 
-const app = express()
-
-export default app
+export const app = express()
