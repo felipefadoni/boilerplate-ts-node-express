@@ -15,3 +15,8 @@
 * Eslint Standard
 * Lint Staged
 * Husky
+
+### Create Migration
+```
+npx knex migrate:make create-table-dispatchability -x ts
+```
