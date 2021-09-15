@@ -4,7 +4,7 @@
     "module": "commonjs",
     "rootDirs": ["src", "tests"],
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "@/tests/*": ["../tests/*"],
       "@/*": ["*"]
