@@ -1,20 +1,17 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 14",
   "compilerOptions": {
     "target": "ES2015",
-    "lib": ["ES2015"],
     "module": "commonjs",
     "rootDirs": ["src", "tests"],
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/tests/*": ["../tests/*"]
+      "@/tests/*": ["../tests/*"],
+      "@/*": ["*"]
     },
     "allowJs": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
