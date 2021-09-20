@@ -7,13 +7,15 @@ export const setupRoutes = (app: Express): void => {
 
   const rootDir = join(__dirname, '.')
 
+  const ext = process.env.NODE_ENV === 'production' ? '.js' : '.ts'
+
   readdirSync(rootDir, {
     withFileTypes: true
   })
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name)
     .map(async (dir) => {
-      (await import(`${rootDir}/${dir}/router.ts`)).default(router)
+      (await import(`${rootDir}/${dir}/router${ext}`)).default(router)
     })
 
   app.use('/', router)
