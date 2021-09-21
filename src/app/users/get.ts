@@ -1,13 +1,16 @@
-import { httpResponse } from '@/helper/http-helper'
 import { Request, Response } from 'express'
+import { httpResponse } from '@/helper/http-helper'
+import { getAllUsersService } from '@/domain/users/services/get-all'
 
-export const getUserController = (_request: Request, response: Response): Response => {
+export const getUserController = async (_request: Request, response: Response): Promise<Response> => {
   try {
+    const users = await getAllUsersService()
+
     return httpResponse({
       body: {
         message: 'List users',
-        rows: {},
-        total: 0
+        rows: users,
+        total: users.length
       },
       response,
       status: 200

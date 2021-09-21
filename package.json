@@ -32,6 +32,7 @@
     "start": "node ./dist/main/index.js",
     "build": "rimraf ./dist && tsc -p tsconfig-build.json",
     "dev": "NODE_ENV=development ts-node-dev --inspect --respawn --transpile-only --clear --ignore-watch node_modules -r tsconfig-paths/register src/main/index.ts",
+    "predev": "npx knex migrate:latest",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
